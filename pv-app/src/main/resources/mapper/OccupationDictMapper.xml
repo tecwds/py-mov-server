@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.wpaint.pymov.mapper.OccupationDictMapper">
+
+    <resultMap id="BaseResultMap" type="top.wpaint.pymov.domain.OccupationDict">
+            <id property="occupationId" column="occupation_id" />
+            <result property="enName" column="en_name" />
+            <result property="cnName" column="cn_name" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        occupation_id,en_name,cn_name
+    </sql>
+</mapper>

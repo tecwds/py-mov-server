@@ -1,0 +1,20 @@
+server:
+  port: 31234
+
+# Spring 配置
+spring:
+  application:
+    name: '重生之 Python 推荐系统 —— 电影'
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.oceanbase.jdbc.Driver
+    url: jdbc:oceanbase://124.221.233.70:2883/py-mov
+    username: pmov
+    password: pmov
+
+# MyBatis 配置
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+
+jwt:
+  secret-key: 'py-mov'

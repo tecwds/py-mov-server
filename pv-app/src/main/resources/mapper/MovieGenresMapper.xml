@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.wpaint.pymov.mapper.MovieGenresMapper">
+
+    <resultMap id="BaseResultMap" type="top.wpaint.pymov.domain.MovieGenres">
+            <id property="movieId" column="movie_id" />
+            <id property="genreId" column="genre_id" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        movie_id,genre_id
+    </sql>
+</mapper>
