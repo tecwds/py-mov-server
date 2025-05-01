@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.wpaint.pymov.mapper.GenresDictMapper">
+
+    <resultMap id="BaseResultMap" type="top.wpaint.pymov.domain.GenresDict">
+            <id property="genreId" column="genre_id" />
+            <result property="genreNameEn" column="genre_name_en" />
+            <result property="genreNameCn" column="genre_name_cn" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        genre_id,genre_name_en,genre_name_cn
+    </sql>
+</mapper>
