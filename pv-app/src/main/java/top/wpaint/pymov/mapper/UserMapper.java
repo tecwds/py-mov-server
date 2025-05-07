@@ -1,7 +1,7 @@
 package top.wpaint.pymov.mapper;
 
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
 import top.wpaint.pymov.domain.User;
 
 /**
@@ -12,8 +12,9 @@ import top.wpaint.pymov.domain.User;
 */
 @Mapper
 public interface UserMapper {
-
     User selectByUsername(String username);
+
+    void insertOne(User u);
 }
 
 

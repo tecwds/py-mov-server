@@ -21,6 +21,25 @@
         nickname,password,email
     </sql>
 
+    <insert id="insertOne">
+        INSERT INTO pv_user
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <include refid="Base_Column_List" />
+        </trim>
+        VALUES
+        <trim>
+            <if test="userId != null">#{userId},</if>
+            <if test="gender != null">#{gender},</if>
+            <if test="age != null">#{age},</if>
+            <if test="occupation != null">#{occupation},</if>
+            <if test="zipCode != null">#{zipCode},</if>
+            #{username},
+            <if test="nickname != null>">#{nickname},</if>
+            #{password},
+            <if test="email != null">#{email},</if>
+        </trim>
+    </insert>
+
     <!-- 查询所有用户 -->
     <select id="selectByUsername" resultType="top.wpaint.pymov.domain.User">
         select
