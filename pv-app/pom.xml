@@ -37,10 +37,30 @@
             <artifactId>spring-boot-starter-undertow</artifactId>
         </dependency>
 
+        <!-- 权限认证 -->
         <dependency>
             <groupId>cn.dev33</groupId>
             <artifactId>sa-token-spring-boot-starter</artifactId>
             <version>1.42.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.dev33</groupId>
+            <artifactId>sa-token-core</artifactId>
+            <version>1.42.0</version>
+        </dependency>
+
+        <!-- 权限认证集成 JWT -->
+        <dependency>
+            <groupId>cn.dev33</groupId>
+            <artifactId>sa-token-jwt</artifactId>
+            <version>1.40.0</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>cn.hutool</groupId>
+                    <artifactId>hutool-all</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <!-- ORM Mybatis-Plus -->
@@ -64,8 +84,8 @@
 
         <dependency>
             <groupId>cn.hutool</groupId>
-            <artifactId>hutool-jwt</artifactId>
-            <version>5.8.35</version>
+            <artifactId>hutool-all</artifactId>
+            <version>5.8.26</version>
         </dependency>
     </dependencies>
 
