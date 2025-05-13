@@ -27,7 +27,7 @@ public class QueryUtils {
         if (CollUtil.isNotEmpty(list)) {
             query.and(q -> {
                 list.forEach(item -> {
-                    q.or().like(Objects.nonNull(item), getColumn, item);
+                    q.or().like(ObjUtil.isNotEmpty(item), getColumn, item);
                 });
             });
         }
