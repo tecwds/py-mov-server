@@ -5,7 +5,6 @@ import cn.dev33.satoken.stp.parameter.SaLoginParameter;
 import cn.hutool.crypto.digest.MD5;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 import top.wpaint.pymov.common.RCode;
 import top.wpaint.pymov.mapper.UserMapper;

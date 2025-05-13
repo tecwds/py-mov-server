@@ -14,6 +14,7 @@ public class GlobalExceptionHandler {
 
     /**
      * 业务异常统一处理
+     *
      * @param e 业务异常
      * @return R<String>
      */
@@ -25,6 +26,7 @@ public class GlobalExceptionHandler {
 
     /**
      * SaToken异常统一处理
+     *
      * @param e 异常
      * @return R<String>
      */
@@ -36,6 +38,7 @@ public class GlobalExceptionHandler {
 
     /**
      * 系统异常统一处理
+     *
      * @param e 通用异常
      * @return R<String>
      */

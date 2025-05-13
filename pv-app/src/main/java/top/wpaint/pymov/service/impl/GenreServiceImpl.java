@@ -7,13 +7,13 @@ import top.wpaint.pymov.model.entity.Genre;
 import top.wpaint.pymov.service.GenreService;
 
 /**
-* @author tecwds
-* @description 针对表【pv_genre】的数据库操作Service实现
-* @createDate 2025-05-13 17:51:07
-*/
+ * @author tecwds
+ * @description 针对表【pv_genre】的数据库操作Service实现
+ * @createDate 2025-05-13 17:51:07
+ */
 @Service
 public class GenreServiceImpl extends ServiceImpl<GenreMapper, Genre>
-    implements GenreService{
+        implements GenreService {
 
 }
 

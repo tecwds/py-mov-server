@@ -1,6 +1,5 @@
 package top.wpaint.pymov.model.dto.movie;
 
-import cn.hutool.core.lang.Pair;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import top.wpaint.pymov.common.QueryRange;

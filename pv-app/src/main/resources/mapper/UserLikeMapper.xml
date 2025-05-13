@@ -5,8 +5,8 @@
 <mapper namespace="top.wpaint.pymov.mapper.UserLikeMapper">
 
     <resultMap id="BaseResultMap" type="top.wpaint.pymov.model.entity.UserLike">
-            <result property="user_id" column="user_id" />
-            <result property="genre_id" column="genre_id" />
+        <result property="user_id" column="user_id"/>
+        <result property="genre_id" column="genre_id"/>
     </resultMap>
 
     <sql id="Base_Column_List">

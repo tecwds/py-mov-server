@@ -9,35 +9,30 @@ import java.io.Serial;
 import java.io.Serializable;
 
 /**
- * 
  * @TableName pv_user
  */
-@TableName(value ="pv_user")
+@TableName(value = "pv_user")
 @Data
 public class User implements Serializable {
+    @Serial
+    @TableField(exist = false)
+    private static final long serialVersionUID = 1L;
     /**
      * 豆瓣用户ID
      */
     @TableId
     private String userId;
-
     /**
      * 用户昵称
      */
     private String userNickname;
-
     /**
      * 用户账号
      */
     private String userAccount;
-
     /**
      * 用户密码
      */
     private String userPassword;
-
-    @Serial
-    @TableField(exist = false)
-    private static final long serialVersionUID = 1L;
 
 }

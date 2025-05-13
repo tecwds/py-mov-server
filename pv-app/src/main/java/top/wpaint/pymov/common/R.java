@@ -8,6 +8,7 @@ import java.io.Serializable;
 
 /**
  * 全局返回类
+ *
  * @param <T> 返回的类型
  */
 @Data
@@ -28,6 +29,7 @@ public class R<T> implements Serializable {
     public static <T> R<T> ok(RCode rcode, T data) {
         return new R<>(rcode.getCode(), rcode.getMessage(), data);
     }
+
     public static <T> R<T> ok(T data) {
         return new R<>(RCode.SUCCESS.getCode(), RCode.SUCCESS.getMessage(), data);
     }

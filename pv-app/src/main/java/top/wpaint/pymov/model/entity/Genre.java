@@ -10,24 +10,21 @@ import java.io.Serial;
 import java.io.Serializable;
 
 /**
- * 
  * @TableName pv_genre
  */
-@TableName(value ="pv_genre")
+@TableName(value = "pv_genre")
 @Data
 public class Genre implements Serializable {
+    @Serial
+    @TableField(exist = false)
+    private static final long serialVersionUID = 1L;
     /**
      * 主键ID
      */
     @TableId(type = IdType.AUTO)
     private Long id;
-
     /**
      * 类型名称
      */
     private String genreName;
-
-    @Serial
-    @TableField(exist = false)
-    private static final long serialVersionUID = 1L;
 }

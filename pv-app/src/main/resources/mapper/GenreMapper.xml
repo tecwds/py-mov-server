@@ -5,8 +5,8 @@
 <mapper namespace="top.wpaint.pymov.mapper.GenreMapper">
 
     <resultMap id="BaseResultMap" type="top.wpaint.pymov.model.entity.Genre">
-            <id property="id" column="id" />
-            <result property="genre_name" column="genre_name" />
+        <id property="id" column="id"/>
+        <result property="genre_name" column="genre_name"/>
     </resultMap>
 
     <sql id="Base_Column_List">

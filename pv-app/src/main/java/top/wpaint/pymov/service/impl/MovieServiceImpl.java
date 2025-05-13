@@ -4,15 +4,10 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
-import top.wpaint.pymov.common.QueryRange;
 import top.wpaint.pymov.mapper.MovieMapper;
 import top.wpaint.pymov.model.dto.movie.MovieQueryDto;
 import top.wpaint.pymov.model.entity.Movie;
 import top.wpaint.pymov.service.MovieService;
-
-import java.math.BigDecimal;
-import java.util.Date;
-import java.util.List;
 
 import static top.wpaint.pymov.utils.QueryUtils.queryListHelper;
 import static top.wpaint.pymov.utils.QueryUtils.queryRangeHelper;

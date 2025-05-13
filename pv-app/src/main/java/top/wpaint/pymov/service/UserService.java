@@ -6,10 +6,10 @@ import top.wpaint.pymov.model.vo.LoginVo;
 import top.wpaint.pymov.model.vo.UserVo;
 
 /**
-* @author tecwds
-* @description 针对表【pv_user】的数据库操作Service
-* @createDate 2025-05-13 17:51:07
-*/
+ * @author tecwds
+ * @description 针对表【pv_user】的数据库操作Service
+ * @createDate 2025-05-13 17:51:07
+ */
 public interface UserService extends IService<User> {
     /**
      * 用户注册
@@ -22,7 +22,8 @@ public interface UserService extends IService<User> {
 
     /**
      * 用户登录
-     * @param account 账号
+     *
+     * @param account  账号
      * @param password 密码
      * @return 用户脱敏信息
      */
@@ -38,6 +39,7 @@ public interface UserService extends IService<User> {
 
     /**
      * 用户实体转换为用户脱敏信息
+     *
      * @param user 用户实体
      * @return 用户脱敏信息
      */

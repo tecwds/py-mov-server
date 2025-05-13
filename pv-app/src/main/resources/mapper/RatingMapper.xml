@@ -5,11 +5,11 @@
 <mapper namespace="top.wpaint.pymov.mapper.RatingMapper">
 
     <resultMap id="BaseResultMap" type="top.wpaint.pymov.model.entity.Rating">
-            <id property="rating_id" column="rating_id" />
-            <result property="user_id" column="user_id" />
-            <result property="movie_id" column="movie_id" />
-            <result property="rating" column="rating" />
-            <result property="rating_time" column="rating_time" />
+        <id property="rating_id" column="rating_id"/>
+        <result property="user_id" column="user_id"/>
+        <result property="movie_id" column="movie_id"/>
+        <result property="rating" column="rating"/>
+        <result property="rating_time" column="rating_time"/>
     </resultMap>
 
     <sql id="Base_Column_List">

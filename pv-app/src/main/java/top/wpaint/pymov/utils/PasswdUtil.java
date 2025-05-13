@@ -1,6 +1,5 @@
 package top.wpaint.pymov.utils;
 
-import cn.hutool.core.util.HexUtil;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 import org.springframework.util.DigestUtils;
@@ -12,6 +11,7 @@ public class PasswdUtil {
 
     /**
      * 加密密码
+     *
      * @param password 原始密码
      * @return 加密后密码
      */
