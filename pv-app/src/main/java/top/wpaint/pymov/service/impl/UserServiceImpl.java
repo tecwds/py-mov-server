@@ -69,7 +69,9 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
     @Override
     public UserVo convertToVo(User user) {
         UserVo vo = new UserVo();
-        BeanUtils.copyProperties(user, vo);
+        vo.setUserId(user.getUserId());
+        vo.setUserNickname(user.getUserNickname());
+        vo.setUserAccount(user.getUserAccount());
         return vo;
     }
 
