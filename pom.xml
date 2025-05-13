@@ -14,7 +14,7 @@
 
     <properties>
         <revision>0.0.1</revision>
-        <spring-boot.version>3.4.5</spring-boot.version>
+        <spring-boot.version>2.7.6</spring-boot.version>
     </properties>
 
     <modules>
@@ -33,9 +33,11 @@
             </dependency>
 
             <dependency>
-                <groupId>top.wpaint</groupId>
-                <artifactId>pv-common</artifactId>
-                <version>${revision}</version>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-bom</artifactId>
+                <version>3.5.9</version>
+                <scope>import</scope>
+                <type>pom</type>
             </dependency>
         </dependencies>
     </dependencyManagement>

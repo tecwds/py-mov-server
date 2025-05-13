@@ -7,7 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @Slf4j
 @SpringBootApplication
-@MapperScan("top.wpaint.pymov.mapper")
 public class PyMovApplication {
 
     public static void main(String[] args) {
