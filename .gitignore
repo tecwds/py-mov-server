@@ -56,3 +56,5 @@ tools/secrets/db_root_password.txt
 .env
 .env.dev
 
+pv-app/src/main/resources/application-*.yml
+
