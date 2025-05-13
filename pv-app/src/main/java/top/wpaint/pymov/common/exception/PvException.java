@@ -1,11 +1,13 @@
 package top.wpaint.pymov.common.exception;
 
+import lombok.Getter;
 import top.wpaint.pymov.common.RCode;
 
 public class PvException extends RuntimeException {
     /**
      * 错误码
      */
+    @Getter
     private final int code;
 
     public PvException(int code, String message) {

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.wpaint.pymov.mapper.RatingMapper">
+
+    <resultMap id="BaseResultMap" type="top.wpaint.pymov.model.entity.Rating">
+            <id property="rating_id" column="rating_id" />
+            <result property="user_id" column="user_id" />
+            <result property="movie_id" column="movie_id" />
+            <result property="rating" column="rating" />
+            <result property="rating_time" column="rating_time" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        rating_id,user_id,movie_id,rating,rating_time
+    </sql>
+</mapper>

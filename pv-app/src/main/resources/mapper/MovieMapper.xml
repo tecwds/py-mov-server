@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.wpaint.pymov.mapper.MovieMapper">
+
+    <resultMap id="BaseResultMap" type="top.wpaint.pymov.model.entity.Movie">
+            <id property="id" column="id" />
+            <result property="movie_id" column="movie_id" />
+            <result property="name" column="name" />
+            <result property="alias" column="alias" />
+            <result property="actors" column="actors" />
+            <result property="cover" column="cover" />
+            <result property="directors" column="directors" />
+            <result property="douban_score" column="douban_score" />
+            <result property="douban_votes" column="douban_votes" />
+            <result property="genres" column="genres" />
+            <result property="imdb_id" column="imdb_id" />
+            <result property="languages" column="languages" />
+            <result property="mins" column="mins" />
+            <result property="official_site" column="official_site" />
+            <result property="regions" column="regions" />
+            <result property="release_date" column="release_date" />
+            <result property="slug" column="slug" />
+            <result property="storyline" column="storyline" />
+            <result property="tags" column="tags" />
+            <result property="year" column="year" />
+            <result property="actor_ids" column="actor_ids" />
+            <result property="director_ids" column="director_ids" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,movie_id,name,alias,actors,cover,
+        directors,douban_score,douban_votes,genres,imdb_id,
+        languages,mins,official_site,regions,release_date,
+        slug,storyline,tags,year,actor_ids,
+        director_ids
+    </sql>
+</mapper>

@@ -37,6 +37,12 @@
             <artifactId>spring-boot-starter-undertow</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>cn.dev33</groupId>
+            <artifactId>sa-token-spring-boot-starter</artifactId>
+            <version>1.42.0</version>
+        </dependency>
+
         <!-- ORM Mybatis-Plus -->
         <dependency>
             <groupId>com.baomidou</groupId>

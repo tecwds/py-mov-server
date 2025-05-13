@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.wpaint.pymov.mapper.PersonMapper">
+
+    <resultMap id="BaseResultMap" type="top.wpaint.pymov.model.entity.Person">
+            <id property="person_id" column="person_id" />
+            <result property="name" column="name" />
+            <result property="sex" column="sex" />
+            <result property="name_en" column="name_en" />
+            <result property="name_zh" column="name_zh" />
+            <result property="birth_year" column="birth_year" />
+            <result property="birth_month" column="birth_month" />
+            <result property="birth_day" column="birth_day" />
+            <result property="birthplace" column="birthplace" />
+            <result property="constellatory" column="constellatory" />
+            <result property="profession" column="profession" />
+            <result property="biography" column="biography" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        person_id,name,sex,name_en,name_zh,birth_year,
+        birth_month,birth_day,birthplace,constellatory,profession,
+        biography
+    </sql>
+</mapper>
