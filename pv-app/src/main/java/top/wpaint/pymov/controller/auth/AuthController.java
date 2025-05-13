@@ -9,6 +9,7 @@ import top.wpaint.pymov.model.dto.RegistryDto;
 import top.wpaint.pymov.model.vo.LoginVo;
 import top.wpaint.pymov.service.UserService;
 import top.wpaint.pymov.utils.ThrowUtils;
+import top.wpaint.pymov.utils.ValidUtils;
 
 import javax.annotation.Resource;
 
@@ -24,7 +25,7 @@ public class AuthController {
      */
     @PostMapping("login")
     public R<LoginVo> login(@RequestBody LoginDto loginDto) {
-        validParamNotNull(loginDto);
+        ValidUtils.requireNotNull(loginDto);
         return R.ok(userService.login(loginDto.getUserAccount(), loginDto.getUserPassword()));
     }
 
@@ -44,7 +45,7 @@ public class AuthController {
      */
     @PostMapping("register")
     public R<String> register(@RequestBody RegistryDto registryDto) {
-        validParamNotNull(registryDto);
+        ValidUtils.requireNotNull(registryDto);
 
         ThrowUtils.throwIf(!registryDto.getPassword().equals(registryDto.getRePassword()),
                 RCode.PARAMS_ERROR,
@@ -54,9 +55,4 @@ public class AuthController {
 
         return R.ok(userId);
     }
-
-    private void validParamNotNull(Object params) {
-        ThrowUtils.throwIf(params == null, RCode.PARAMS_ERROR);
-    }
-
 }

@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 /**
@@ -23,6 +24,7 @@ public class UserLike implements Serializable {
      */
     private Long genreId;
 
+    @Serial
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
 }

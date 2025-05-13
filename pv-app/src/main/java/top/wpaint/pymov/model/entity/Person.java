@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 /**
@@ -75,6 +76,7 @@ public class Person implements Serializable {
      */
     private String biography;
 
+    @Serial
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
 }

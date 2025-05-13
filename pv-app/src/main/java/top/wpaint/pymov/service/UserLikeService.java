@@ -1,7 +1,10 @@
 package top.wpaint.pymov.service;
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
+import top.wpaint.pymov.model.dto.user.like.LikeQueryDto;
 import top.wpaint.pymov.model.entity.UserLike;
+import top.wpaint.pymov.model.vo.user.like.LikeVo;
 
 /**
 * @author tecwds
@@ -10,4 +13,11 @@ import top.wpaint.pymov.model.entity.UserLike;
 */
 public interface UserLikeService extends IService<UserLike> {
 
+    /**
+     * 获取用户喜欢的电影类型分页
+     *
+     * @param likeQueryDto 查询参数
+     * @return 分页数据
+     */
+    Page<LikeVo> getLikePage(LikeQueryDto likeQueryDto);
 }
