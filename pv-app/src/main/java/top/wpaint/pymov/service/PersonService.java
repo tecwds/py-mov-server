@@ -1,7 +1,7 @@
 package top.wpaint.pymov.service;
 
-import top.wpaint.pymov.model.entity.Person;
 import com.baomidou.mybatisplus.extension.service.IService;
+import top.wpaint.pymov.model.entity.Person;
 
 /**
 * @author tecwds

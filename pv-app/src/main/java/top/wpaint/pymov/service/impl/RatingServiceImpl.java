@@ -1,10 +1,10 @@
 package top.wpaint.pymov.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.springframework.stereotype.Service;
+import top.wpaint.pymov.mapper.RatingMapper;
 import top.wpaint.pymov.model.entity.Rating;
 import top.wpaint.pymov.service.RatingService;
-import top.wpaint.pymov.mapper.RatingMapper;
-import org.springframework.stereotype.Service;
 
 /**
 * @author tecwds

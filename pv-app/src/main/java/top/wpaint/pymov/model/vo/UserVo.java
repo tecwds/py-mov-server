@@ -1,6 +1,5 @@
 package top.wpaint.pymov.model.vo;
 
-import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 
 import java.io.Serial;
@@ -15,16 +14,16 @@ public class UserVo implements Serializable {
     /**
      * 豆瓣用户ID
      */
-    private String user_id;
+    private String userId;
 
     /**
      * 用户昵称
      */
-    private String user_nickname;
+    private String userNickname;
 
     /**
      * 用户账号
      */
-    private String user_account;
+    private String userAccount;
 
 }

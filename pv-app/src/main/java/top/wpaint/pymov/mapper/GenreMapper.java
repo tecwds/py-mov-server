@@ -1,7 +1,7 @@
 package top.wpaint.pymov.mapper;
 
-import top.wpaint.pymov.model.entity.Genre;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import top.wpaint.pymov.model.entity.Genre;
 
 /**
 * @author tecwds
