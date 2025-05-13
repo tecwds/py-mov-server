@@ -17,12 +17,12 @@ public class UserLike implements Serializable {
     /**
      * 用户ID
      */
-    private String user_id;
+    private String userId;
 
     /**
      * 类型ID
      */
-    private Long genre_id;
+    private Long genreId;
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;

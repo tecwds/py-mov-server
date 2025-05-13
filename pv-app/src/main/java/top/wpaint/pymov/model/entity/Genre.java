@@ -23,7 +23,7 @@ public class Genre implements Serializable {
     /**
      * 类型名称
      */
-    private String genre_name;
+    private String genreName;
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;

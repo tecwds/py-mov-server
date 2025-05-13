@@ -25,7 +25,7 @@ public class Movie implements Serializable {
     /**
      * 电影ID
      */
-    private String movie_id;
+    private String movieId;
 
     /**
      * 电影名称
@@ -55,12 +55,12 @@ public class Movie implements Serializable {
     /**
      * 豆瓣评分
      */
-    private BigDecimal douban_score;
+    private BigDecimal doubanScore;
 
     /**
      * 豆瓣投票数
      */
-    private Integer douban_votes;
+    private Integer doubanVotes;
 
     /**
      * 类型
@@ -70,7 +70,7 @@ public class Movie implements Serializable {
     /**
      * IMDB ID
      */
-    private String imdb_id;
+    private String imdbId;
 
     /**
      * 语言
@@ -85,7 +85,7 @@ public class Movie implements Serializable {
     /**
      * 官方网站
      */
-    private String official_site;
+    private String officialSite;
 
     /**
      * 地区
@@ -95,7 +95,7 @@ public class Movie implements Serializable {
     /**
      * 上映日期
      */
-    private Date release_date;
+    private Date releaseDate;
 
     /**
      * 短链标识
@@ -120,12 +120,12 @@ public class Movie implements Serializable {
     /**
      * 演员ID列表
      */
-    private String actor_ids;
+    private String actorIds;
 
     /**
      * 导演ID列表
      */
-    private String director_ids;
+    private String directorIds;
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;

@@ -18,12 +18,22 @@ public class User implements Serializable {
      * 豆瓣用户ID
      */
     @TableId
-    private String user_id;
+    private String userId;
 
     /**
      * 用户昵称
      */
-    private String user_nickname;
+    private String userNickname;
+
+    /**
+     * 用户账号
+     */
+    private String userAccount;
+
+    /**
+     * 用户密码
+     */
+    private String userPassword;
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;

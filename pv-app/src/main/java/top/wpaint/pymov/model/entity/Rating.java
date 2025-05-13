@@ -20,17 +20,17 @@ public class Rating implements Serializable {
      * 评分ID
      */
     @TableId
-    private Long rating_id;
+    private Long ratingId;
 
     /**
      * 豆瓣用户ID（md5格式）
      */
-    private String user_id;
+    private String userId;
 
     /**
      * 电影ID，对应豆瓣的DOUBAN_ID
      */
-    private String movie_id;
+    private String movieId;
 
     /**
      * 评分
@@ -40,7 +40,7 @@ public class Rating implements Serializable {
     /**
      * 评分时间
      */
-    private Date rating_time;
+    private Date ratingTime;
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;

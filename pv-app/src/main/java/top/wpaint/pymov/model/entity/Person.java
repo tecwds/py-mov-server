@@ -18,7 +18,7 @@ public class Person implements Serializable {
      * 名人ID
      */
     @TableId
-    private Long person_id;
+    private Long personId;
 
     /**
      * 演员名称
@@ -33,27 +33,27 @@ public class Person implements Serializable {
     /**
      * 更多英文名
      */
-    private String name_en;
+    private String nameEn;
 
     /**
      * 更多中文名
      */
-    private String name_zh;
+    private String nameZh;
 
     /**
      * 出生年份
      */
-    private Integer birth_year;
+    private Integer birthYear;
 
     /**
      * 出生月份
      */
-    private Integer birth_month;
+    private Integer birthMonth;
 
     /**
      * 出生日期
      */
-    private Integer birth_day;
+    private Integer birthDay;
 
     /**
      * 出生地
