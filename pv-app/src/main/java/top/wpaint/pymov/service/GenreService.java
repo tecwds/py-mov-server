@@ -2,6 +2,9 @@ package top.wpaint.pymov.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import top.wpaint.pymov.model.entity.Genre;
+import top.wpaint.pymov.model.vo.movie.GenreVo;
+
+import java.util.List;
 
 /**
  * @author tecwds
@@ -10,4 +13,9 @@ import top.wpaint.pymov.model.entity.Genre;
  */
 public interface GenreService extends IService<Genre> {
 
+    /**
+     * 获取所有 genre
+     * @return genre 列表
+     */
+    List<GenreVo> getAllGenre();
 }
