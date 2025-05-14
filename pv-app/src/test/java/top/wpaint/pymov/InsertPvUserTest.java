@@ -27,7 +27,7 @@ public class InsertPvUserTest {
     @Resource
     private GenreService genreService;
 
-    @Test
+//    @Test
     void insert() {
         List<Long> genreIds = new ArrayList<>(genreService.list().stream().map(Genre::getId).toList());
         List<String> userIds = userService.list(new Page<>(1, 400)).stream().map(User::getUserId).toList();
