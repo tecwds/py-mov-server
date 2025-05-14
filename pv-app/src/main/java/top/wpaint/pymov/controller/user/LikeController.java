@@ -35,7 +35,7 @@ public class LikeController {
     private UserLikeService userLikeService;
 
     /**
-     * 获取用户收藏列表
+     * 获取用户喜欢的类型列表
      *
      * @param likeQueryDto 查询条件
      * @return 分页数据
@@ -47,7 +47,7 @@ public class LikeController {
     }
 
     /**
-     * 添加用户收藏
+     * 添加用户喜欢的电影类型
      *
      * @param likeAddDto 收藏信息
      * @return 无
@@ -69,7 +69,7 @@ public class LikeController {
     }
 
     /**
-     * 编辑用户收藏
+     * 编辑用户喜欢的电影类型
      *
      * @param likeEditDto 收藏信息
      * @return 无
@@ -100,7 +100,7 @@ public class LikeController {
     }
 
     /**
-     * 删除用户收藏
+     * 删除用户喜欢的电影类型
      *
      * @param likeDeleteDto 删除信息
      * @return 无
