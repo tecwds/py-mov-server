@@ -1,5 +1,6 @@
 package top.wpaint.pymov.controller.user;
 
+import cn.dev33.satoken.annotation.SaCheckLogin;
 import cn.hutool.core.collection.CollUtil;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
@@ -25,6 +26,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Slf4j
+@SaCheckLogin
 @RestController
 @RequestMapping("user/like")
 public class LikeController {
