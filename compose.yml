@@ -13,7 +13,7 @@ services:
     networks:
       pv-app-net:
     healthcheck:
-      test: "curl -s localhost:31234/api/healthy | grep UP"
+      test: "curl -s http://localhost:31234/api/healthy | grep UP"
       start_period: 5s
       start_interval: 10s
       interval: 60s
