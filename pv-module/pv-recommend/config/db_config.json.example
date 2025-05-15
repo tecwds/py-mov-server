@@ -1,0 +1,10 @@
+{
+    "host": "*.*.*.*",
+    "port": 1000,
+    "user": "username",
+    "password": "password",
+    "database": "databaseName",
+    "charset": "utf8mb4",
+    "cursorclass": "DictCursor",
+    "autocommit": true
+}
