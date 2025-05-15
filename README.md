@@ -24,3 +24,15 @@ Tips:
 
 - 配置文件需要去掉 `example` 后缀
 - 必须配置数据库配置，否则容器无法正常启动
+
+## 如何启动
+
+这里只提供 docker 形式，注意需要高版本（建议最新版）Docker
+
+```shell
+docker compose -f compose.yml up -d
+```
+
+Tips:
+
+- 可能存在网络问题，如出现问题，需自行设置代理
