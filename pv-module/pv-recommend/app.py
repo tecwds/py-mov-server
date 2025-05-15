@@ -21,7 +21,7 @@ def initialize_configurations():
 
     # 1. 获取数据库配置
     print("\n[1/2] 数据库配置")
-    db_config = ConfigManager.get_db_config()
+    db_config = ConfigManager.load_db_config()
     print("\n当前数据库配置:")
     for key, value in db_config.items():
         if key != 'password':
@@ -31,7 +31,7 @@ def initialize_configurations():
 
     # 2. 获取应用配置
     print("\n[2/2] 应用运行参数")
-    app_config = ConfigManager.get_app_config()
+    app_config = ConfigManager.load_app_config()
 
     # 打印最终配置
     print("\n最终配置确认:")
@@ -117,7 +117,7 @@ def get_recommendations():
         }), 500
 
 
-@app.route('/api/health', methods=['GET'])
+@app.route('/api/healthy', methods=['GET'])
 def health_check():
     """健康检查接口"""
     try:
