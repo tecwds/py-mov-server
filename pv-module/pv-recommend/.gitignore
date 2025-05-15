@@ -1,0 +1,4 @@
+.venv
+.idea
+logs
+config/db_config.json
