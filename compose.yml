@@ -1,0 +1,45 @@
+networks:
+  pv-app-net:
+
+services:
+  # Java 后端
+  pv-app:
+    build:
+      dockerfile: Dockerfile
+    container_name: "pv-mov-server"
+    restart: unless-stopped
+    ports:
+      - "31234:31234"
+    networks:
+      pv-app-net:
+    healthcheck:
+      test: "curl -s localhost:31234/api/healthy | grep UP"
+      start_period: 5s
+      start_interval: 10s
+      interval: 60s
+      timeout: 3s
+      retries: 5
+    depends_on:
+      pv-recommend:
+        condition: service_healthy
+
+  # Python 推荐后端
+  pv-recommend:
+    build:
+      context: ./pv-module/pv-recommend
+      dockerfile: Dockerfile
+    container_name: "pv-mov-recommend"
+    restart: unless-stopped
+    # 不需要对外开放接口
+#    ports:
+#      - "5000:5000"
+    networks:
+      pv-app-net:
+    healthcheck:
+      test: "curl -s http://localhost:5000/api/healthy | grep healthy"
+      start_period: 5s
+      start_interval: 30s
+      # 推荐逻辑问题，不宜过多的进行健康检查
+      interval: 3600s
+      timeout: 30s
+      retries: 5
