@@ -1,5 +1,7 @@
 package top.wpaint.pymov.service.impl;
 
+import cn.hutool.core.collection.CollUtil;
+import cn.hutool.core.util.StrUtil;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -7,7 +9,11 @@ import org.springframework.stereotype.Service;
 import top.wpaint.pymov.mapper.MovieMapper;
 import top.wpaint.pymov.model.dto.movie.MovieQueryDto;
 import top.wpaint.pymov.model.entity.Movie;
+import top.wpaint.pymov.model.vo.movie.MovieVo;
 import top.wpaint.pymov.service.MovieService;
+
+import java.util.Arrays;
+import java.util.List;
 
 import static top.wpaint.pymov.utils.QueryUtils.queryListHelper;
 import static top.wpaint.pymov.utils.QueryUtils.queryRangeHelper;
@@ -60,6 +66,62 @@ public class MovieServiceImpl extends ServiceImpl<MovieMapper, Movie>
         queryRangeHelper(query, movieQueryDto.getYear(), Movie::getYear);
 
         return query;
+    }
+
+    @Override
+    public MovieVo convertToVo(Movie movie) {
+        MovieVo vo = new MovieVo();
+        vo.setId(movie.getId());
+        vo.setMovieId(movie.getMovieId());
+        vo.setName(movie.getName());
+        vo.setAlias(movie.getAlias());
+        vo.setCover(movie.getCover());
+        vo.setDoubanScore(movie.getDoubanScore());
+        vo.setDoubanVotes(movie.getDoubanVotes());
+        vo.setImdbId(movie.getImdbId());
+        vo.setMins(movie.getMins());
+        vo.setOfficialSite(movie.getOfficialSite());
+        vo.setReleaseDate(movie.getReleaseDate());
+        vo.setSlug(movie.getSlug());
+        vo.setStoryline(movie.getStoryline());
+        vo.setTags(movie.getTags());
+        vo.setYear(movie.getYear());
+
+        // 演员
+        if (StrUtil.isNotBlank(movie.getActors())) {
+            vo.setActors(List.of(movie.getActors().split("/")));
+        }
+
+        // 导演
+        if (StrUtil.isNotBlank(movie.getDirectors())) {
+            vo.setDirectors(List.of(movie.getDirectors().split("/")));
+        }
+
+        // 类型
+        if (StrUtil.isNotBlank(movie.getGenres())) {
+            vo.setGenres(List.of(movie.getGenres().split("/")));
+        }
+
+        // 语言
+        if (StrUtil.isNotBlank(movie.getLanguages())) {
+            // 数据集的原因，需要为每个 language 执行 trim
+            List<String> languages = Arrays.stream(movie.getLanguages().split("/"))
+                    .map(String::trim)
+                    .toList();
+            vo.setLanguages(languages);
+        }
+
+        // 地区
+        if (StrUtil.isNotBlank(movie.getRegions())) {
+            // 数据集的原因，需要为每个 region 执行 trim
+            List<String> regions = Arrays.stream(movie.getRegions().split("/"))
+                    .map(String::trim)
+                    .toList();
+            vo.setLanguages(regions);
+        }
+
+
+        return vo;
     }
 }
 

@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
 import top.wpaint.pymov.model.dto.movie.MovieQueryDto;
 import top.wpaint.pymov.model.entity.Movie;
+import top.wpaint.pymov.model.vo.movie.MovieVo;
 
 /**
  * @author tecwds
@@ -28,4 +29,11 @@ public interface MovieService extends IService<Movie> {
      * @return QueryWrapper
      */
     LambdaQueryWrapper<Movie> getQueryWrapper(MovieQueryDto movieQueryDto);
+
+    /**
+     * 转换成 vo 对象
+     * @param movie 电影实体类
+     * @return vo 对象
+     */
+    MovieVo convertToVo(Movie movie);
 }
