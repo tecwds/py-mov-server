@@ -68,8 +68,8 @@ public class MovieController {
             }
         }
 
-        // String recommend = HttpUtil.get("http://pv-recommend:5000/api/recommend?user_id=" + userId + "&top_n=" + topN);
-        String recommend = HttpUtil.get("http://localhost:5000/api/recommend?user_id=" + userId + "&top_n=" + topN);
+         String recommend = HttpUtil.get("http://pv-recommend:5000/api/recommend?user_id=" + userId + "&top_n=" + topN);
+//        String recommend = HttpUtil.get("http://localhost:5000/api/recommend?user_id=" + userId + "&top_n=" + topN);
         RecommendRes res = JSONUtil.toBean(recommend, RecommendRes.class, true);
 
         log.info("推荐获取结果: {}", res);

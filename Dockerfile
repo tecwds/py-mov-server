@@ -21,6 +21,7 @@ RUN mkdir -p pv-app/target/dependency && (cd pv-app/target/dependency; jar -xf .
 
 FROM openjdk:17-alpine as runner
 
+RUN apk update && apt add curl
 RUN addgroup -S spring && adduser -S spring -G spring
 
 USER spring:spring
