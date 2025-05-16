@@ -1,6 +1,5 @@
 package top.wpaint.pymov.controller.movie;
 
-import cn.dev33.satoken.annotation.SaCheckLogin;
 import cn.hutool.core.collection.CollUtil;
 import cn.hutool.http.HttpUtil;
 import cn.hutool.json.JSONUtil;
@@ -9,13 +8,11 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import top.wpaint.pymov.common.R;
 import top.wpaint.pymov.common.RCode;
 import top.wpaint.pymov.model.dto.movie.MovieQueryDto;
 import top.wpaint.pymov.model.entity.Movie;
-import top.wpaint.pymov.model.entity.User;
 import top.wpaint.pymov.model.vo.movie.MovieVo;
 import top.wpaint.pymov.service.MovieService;
 import top.wpaint.pymov.service.UserService;
@@ -47,8 +44,9 @@ public class MovieController {
 
     /**
      * 获取某个用户的推荐电影列表
+     *
      * @param userId 用户 ID
-     * @param topN 需要推荐的电影数量，默认推荐 20 条
+     * @param topN   需要推荐的电影数量，默认推荐 20 条
      * @return 电影列表
      */
     @GetMapping("recommend")

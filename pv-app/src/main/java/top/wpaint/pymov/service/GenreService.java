@@ -15,6 +15,7 @@ public interface GenreService extends IService<Genre> {
 
     /**
      * 获取所有 genre
+     *
      * @return genre 列表
      */
     List<GenreVo> getAllGenre();

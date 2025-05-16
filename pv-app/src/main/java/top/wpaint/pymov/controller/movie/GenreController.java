@@ -21,6 +21,7 @@ public class GenreController {
 
     /**
      * 获取所有电影类型
+     *
      * @return 所有电影类型列表
      */
     @GetMapping("list")

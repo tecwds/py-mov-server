@@ -2,7 +2,6 @@ package top.wpaint.pymov;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import lombok.extern.slf4j.Slf4j;
-import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import top.wpaint.pymov.model.entity.Genre;
 import top.wpaint.pymov.model.entity.User;
@@ -27,7 +26,7 @@ public class InsertPvUserTest {
     @Resource
     private GenreService genreService;
 
-//    @Test
+    //    @Test
     void insert() {
         List<Long> genreIds = new ArrayList<>(genreService.list().stream().map(Genre::getId).toList());
         List<String> userIds = userService.list(new Page<>(1, 400)).stream().map(User::getUserId).toList();

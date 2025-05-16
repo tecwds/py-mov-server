@@ -32,6 +32,7 @@ public interface MovieService extends IService<Movie> {
 
     /**
      * 转换成 vo 对象
+     *
      * @param movie 电影实体类
      * @return vo 对象
      */
