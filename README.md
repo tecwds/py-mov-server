@@ -37,3 +37,11 @@ docker compose -f compose.yml up -d
 Tips:
 
 - 可能存在网络问题，如出现问题，需自行设置代理
+
+## 如何修改数据库为 MySQL
+
+> 仅提供步骤
+
+在 `pv-app` 的 `pom.xml` 文件中：
+1. 添加 `mysql` 依赖
+2. 修改 `application.yml` 中的数据库驱动为 `mysql` 驱动
